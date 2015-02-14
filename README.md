@@ -1,8 +1,1 @@
-I'M A FCKING HERO
-
-TIME 2 CODE
-
-HERES WHAT THIS DOES
-1. CARD
-2. FIGNER GOES ON PHONE
-3. heroic
+This is a simple Phonegap Multiplayer Card Game
