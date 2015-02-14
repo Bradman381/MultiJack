@@ -1,0 +1,77 @@
+ <!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link href="http://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Player</title>
+    </head>
+    
+    <body class="table-bg player">
+    	<div class="game-container">
+	        <h3>Player</h3>
+	        
+	        <form class="col s12">
+	            <div class="row">
+	                <div class="input-field col s12">
+	                    <input id="password" type="text" class="validate">
+	                    <label for="password">Password (ask dealer)</label>
+	                </div>
+	            </div>
+	        </form>
+	            <center>
+	                <div class="flip-container card">
+	            	    <div class="flipper">
+	            	    	<div class="front">
+	            		    	<img src="cards/2h.svg"/>
+	        		        </div>
+	            	    	<div class="back">
+	            			    <img src="cards/back.svg" alt="Back of Card"/>
+	            		    </div>
+	            	    </div>
+	                </div>
+	            </center> 
+	        
+	        <br>
+	<!-- BACK BUTTON -->
+	       <center>
+	       <button class="waves-effect waves-light btn-large" onclick="joinLobby()">Submit</button>
+	       <p></p>
+	        <a class="waves-effect waves-light btn-large" href="index.html">Home</a>
+	        <a class="waves-effect waves-light btn-large" href="dealer.html">Dealer</a>
+	        <!-- Flip the card TEST -->
+	        <button class="flip-btn waves-effect waves-light btn-large" onclick="revealAll()">Flip</button>
+	        <button class="send-btn waves-effect waves-light btn-large" onclick="sendCard()">Send Card</button>
+	        </center>
+        </div>
+        <div class="gameScreen">
+	        	<img src="cards/back.svg"/>
+				<button class="waves-effect waves-light btn-large" onclick="stackDraw(1)">Hit Me</button>
+				<button class="waves-effect waves-light btn-large" onclick="stackSum()">Stay</button>
+	    </div>
+        
+        
+        <div class="player-ingame">
+            <div class="hand">
+                <!-- ayy finna add stuff here --> 
+            </div>
+        </div>
+        
+        
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.1.2/firebase.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="cards.js"></script>
+    </body>
+</html>
+
+//upon validation:
+stackMakeDeck(1);
